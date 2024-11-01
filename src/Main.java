@@ -25,17 +25,17 @@ public class Main{
         List<Product> products = service.getAllProduct();
         
         // enhanced for loop
-        // for(Product prod : products){
-        //     System.out.println(prod);
-        // }
-        // System.out.println("============================================================");
+        for(Product prod : products){
+            System.out.println(prod);
+        }
+        System.out.println("============================================================");
 
         // to print specific product
         // eg want to check where is the logitech mouse
-        // System.out.println("A partiular product: ");
-        // Product p = service.getProduct("Logi Mouse");
-        // System.out.println(p);
-        
+        System.out.println("A partiular product: ");
+        Product p = service.getProduct("Logi Mouse");
+        System.out.println(p);
+
         System.out.println("Out of warranty products: ");
         List<Product> outWarrProd = service.getProductOutOfWarranty();
         for(Product prod : outWarrProd){
