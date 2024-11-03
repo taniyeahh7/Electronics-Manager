@@ -47,29 +47,29 @@ public class ProductService {
         return prod;
     }
 
-    // public List<Product> getProductWithText(String text){
-    //     // method using substring
-    //     String str = text.toLowerCase();
-    //     List<Product> prods = new ArrayList<>();
+    public List<Product> getProductWithText(String text){
+        // method using substring
+        String str = text.toLowerCase();
+        List<Product> prods = new ArrayList<>();
 
-    //     for(Product p : products){
-    //         // text in name, place, type
-    //         String name = p.getName().toLowerCase();
-    //         String place = p.getPlace().toLowerCase();
-    //         String type = p.getType().toLowerCase();
-    //         if(place.contains(str) || name.contains(str) || type.contains(str)){ // String has the contains function
-    //             prods.add(p);
-    //         }
-    //     }
-    //     return prods;
-    // }
+        for(Product p : products){
+            // text in name, place, type
+            String name = p.getName().toLowerCase();
+            String place = p.getPlace().toLowerCase();
+            String type = p.getType().toLowerCase();
+            if(place.contains(str) || name.contains(str) || type.contains(str)){ // String has the contains function
+                prods.add(p);
+            }
+        }
+        return prods;
+    }
 
     // get product with text using the stream API
-    public List<Product> getProductWithText(String text){
-        String str = text.toLowerCase();
+    // public List<Product> getProductWithText(String text){
+    //     String str = text.toLowerCase();
 
-        return products.stream()
-               .filter(p -> p.getName().contains(str) || p.getType().contains(str) || p.getType().contains(str))
-               .collect(Collectors.toList());
-    }
+    //     return products.stream()
+    //            .filter(p -> p.getName().contains(str) || p.getType().contains(str) || p.getType().contains(str))
+    //            .collect(Collectors.toList());
+    // }
 }
