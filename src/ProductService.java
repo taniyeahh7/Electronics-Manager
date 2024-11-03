@@ -54,7 +54,7 @@ public class ProductService {
 
         for(Product p : products){
             // text in name, place, type
-            String name = p.getName().toLowerCase();
+            String name =  p.getName().toLowerCase();
             String place = p.getPlace().toLowerCase();
             String type = p.getType().toLowerCase();
             if(place.contains(str) || name.contains(str) || type.contains(str)){ // String has the contains function
